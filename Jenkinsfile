@@ -6,7 +6,7 @@ dotnet = 'path\\to\\dotnet.exe'
 stages {
 stage ('Checkout') {
             steps {
-                 git url: 'https://github.com/Smrigarg/pipelines-dotnet-core',branch: 'master'
+                 git url: 'https://github.com/Smrigarg/LoginPage.git',branch: 'master'
             }
 }
 stage ('Restore PACKAGES') {     
@@ -22,7 +22,7 @@ stage('Build') {
    }
    stage('Publish') {
      steps {
-           bat 'dotnet publish pipelines-dotnet-core.csproj -c Release'
+           bat 'dotnet publish LoginPage.csproj -c Release'
       }
    }
 
